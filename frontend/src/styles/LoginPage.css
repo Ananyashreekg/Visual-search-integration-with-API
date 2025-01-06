@@ -1,0 +1,130 @@
+/* 
+ html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.body {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  font-family: Arial, sans-serif; /* Font styling */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Horizontally centers content */
+  align-items: center; /* Vertically centers content */
+  background: rgb(255, 255, 255); /* Example background color */
+}
+.page-container {
+  width: auto;
+  height: auto;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  position: center;
+  overflow: hidden;
+  /* box-shadow: 0 4px 30px rgb(255, 255, 255); */
+}
+
+/* Forms */
+.form-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #6200ea;
+}
+
+.form-box input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #6200ea;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Left and Right Forms */
+.form-box.left {
+  background-color: #f5f5f5;
+}
+
+.form-box.right {
+  background-color: #f5f5f5;
+}
+
+/* Inactive Form */
+.inactive-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 50%; /* Overlay width is half of the container */
+  height: 100%; /* Overlay only covers the top half */
+  background: rgb(98, 0, 234);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  left: 0; /* Align to the left */
+  transform: translateX(0); /* No transform for left alignment */
+}
+
+.overlay-right {
+  left: 50%; /* Align to the right half of the container */
+  transform: translateX(0); /* No transform for right alignment */
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}

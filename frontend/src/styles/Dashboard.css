@@ -1,0 +1,211 @@
+/* Global Styles */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: rgb(255, 255, 255);
+  color: #1b3cbe;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #007bff, #0056b3); /* Blue gradient background */
+  color: #fff;
+  min-height: 100vh;
+}
+
+.vis {
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(to right, #007bff, #0056b3); Blue gradient background */
+  color: #4c2db3;
+}
+
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between; /* Distributes space between left and right */
+  align-items: center; /* Aligns items vertically */
+  padding: 10px 20px;
+  background: #1b3cbe; /* Darker Blue for contrast */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 0 0 0 20px;
+  animation: slideDown 0.5s ease-out;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.nav-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px; /* Adds space between icons */
+}
+
+.nav-icon:hover {
+  color: #1bbebe; /* Light Blue */
+  transform: scale(1.2);
+}
+
+.main-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Flex container for cards */
+.card-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  height: 800px;
+}
+
+/* Card styles */
+.card {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  border-color: #1b3cbe;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  color: #1b3cbe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.image-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Specific styles for the search card */
+.search-card {
+  background: linear-gradient(to bottom, #f5f5f8, #9d8fe4);
+}
+
+/* Specific styles for the output card */
+.output-card {
+  background: linear-gradient(to bottom, #f5f5f8, #9d8fe4);
+}
+
+/* Output box inside the output card */
+.output-box-content {
+  width: 100%;
+  /* background: #f9f9f9; */
+  border: 1px solid #ddd;
+  /* border-radius: 8px; */
+  padding: 15px;
+  color: #333;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ff0000;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Ensure buttons and inputs align nicely */
+.search-button,
+.input-text,
+.input-file {
+  width: 50%;
+  height: 25px;
+  margin-top: 25px;
+  text-align: center;
+  border-color: #0e4783;
+  color: blue;
+  background-color: #ffffff;
+}
+
+.search-button {
+  font-size: 1rem;
+}
+/* Account Details */
+.account-details {
+  position: fixed;
+  top: 10%; /* Position slightly lower for Account Details */
+  right: 0%; /* Align to the right side */
+  background: linear-gradient(135deg, #010101, #000000);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(250, 244, 244, 0.1);
+  width: 300px;
+  animation: slideInFromRight 0.5s ease;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Search History */
+.search-history {
+  position: fixed;
+  top: 10%; /* Adjust position below Account Details */
+  left: 0%; /* Align to the right side */
+  background: linear-gradient(135deg, #000000, #000000);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  animation: slideInFromLeft 0.5s ease;
+  z-index: 999; /* Slightly lower z-index than Account Details */
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  to {
+    transform: translateX(0); /* Slide in to original position */
+  }
+}

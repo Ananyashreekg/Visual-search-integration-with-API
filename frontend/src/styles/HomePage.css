@@ -1,0 +1,110 @@
+.home-page {
+  text-align: center;
+  padding: 2rem;
+  background-image:url('/src/visual.jpg');
+  background-size: cover; /* Scales the image to cover the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+
+.home-page h1 {
+  font-size: 2.5rem;
+  color: rgb(13, 13, 13);
+  text-align: center;
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-10px);
+  }
+}
+
+.home-page .login-button {
+  background-color: #0e0f0f;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: rgb(224, 214, 214);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.home-page .login-button:hover {
+  background-color: #1573a5;
+  transform: scale(1.1);
+  border-color: #38bdf8; /* Light Blue */
+  box-shadow: 0px 0px 30px #000000;
+  
+  
+}
+
+
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+.home-page {
+  min-height: 100vh; /* Full viewport height */
+
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeat for the image */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  color: #fff; /* White text for better contrast */
+  position: relative; /* For positioning the login button */
+}
+
+.login-button {
+  position: absolute; /* Place the button independently */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the left */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Font size for the button */
+  color: #fff; /* White text */
+  background-color: #007bff; /* Button background color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  border-color: #38bdf8; /* Light Blue */
+  box-shadow: 0px 0px 10px #38bdf8;
+  
+}
+
